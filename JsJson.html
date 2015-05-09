@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>js模拟请求json</title>
+    <script src="js/vendor/jquery-1.10.1.min.js"></script>
+</head>
+<body>
+    <div id="test">
+
+
+    </div>
+    <button id="BzSbumit">获得 JSON 数据</button>
+    <button id="submits">Json测试数据</button>
+    <p></p>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //$.ajax(
+            //    {
+            //        type: "POST",
+            //        url: "Data/TextFile1.json",
+            //        anync: false,
+            //        dataType: "json",
+            //        data: { "": "" },
+            //        success: function (data) {
+            //            alert(data);
+            //        },
+            //        error: function (err) {
+            //            alert("系统错误：f" + err.responseText);
+            //        }
+            //    }
+
+            //);
+
+            //$.ajax({
+            //    type: "post",
+            //    dataType: "json",
+            //    url: "Data/TextFile1.json",
+            //    success: function (msg) {
+            //        alert("获取到的值;" + msg);
+            //        //var str = "";
+            //        //for (i in msg) {
+            //        //    str += "<tr><td>" + msg[i].id + "</td><td>" + msg[i].name + "</td><td>" + msg[i].cla + "</td><td>" + msg[i].sex + "</td><td>" + msg[i].tel + "</td></tr>";
+            //        //}
+            //        //$("tbody").append(str);
+            //    },
+            //    error: function (err) {
+            //        alert("系统错误：f" + err.responseText);
+            //    }
+            //});
+
+
+            $.getJSON('Data/TextFile1.json', function (data) {
+                for (var i = 0; i < data.rows.length; i++) {
+                    $('#test').append('<p>' + data.rows[i].realName + '</p>');
+                }
+            });
+
+            $("#BzSbumit").click(function () {
+                $.getJSON("Data/demo_ajax_json.js", function (result) {
+                    alert("获取到的数据：" + result.firstName);//获取到具体参数的值
+                    //$.each(result, function (i, field) {
+                    //    $("p").append(field + " ");
+                    //});
+                });
+            });
+
+
+            $("#submits").click(function () {
+                $.getJSON("Data/photo_json.js", function (result) {
+                    //alert("获取到的数据：" + result.total);//获取到具体参数的值
+                    $.each(result, function (i, data) {
+                        var datas = data.rows;
+                        alert("数据测试：" + data.type);//获取内部的json
+                        $.each(datas, function (i, field) {
+                            alert("内部的json数据" + field.ImgTitle);
+                        });
+                    });
+                   
+                   
+                    //$.each(result, function (i, field) {
+                    //    $("p").append(field + " ");
+                    //});
+                });
+            });
+        });
+    </script>
+</body>
+</html>

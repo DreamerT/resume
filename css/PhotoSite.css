@@ -1,0 +1,180 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+a, img {
+    border: 0;
+}
+
+    a, a:link, a:visited {
+        color: #006699;
+        text-decoration: none;
+    }
+
+        a:hover {
+            color: #ff7031;
+        }
+
+body {
+    background-color: #000;
+    font: 14px/180% Arial, Helvetica, sans-serif, "新宋体";
+}
+
+.HS10, .HS15 {
+    overflow: hidden;
+    clear: both;
+}
+
+.HS10 {
+    height: 10px;
+}
+
+.HS15 {
+    height: 15px;
+}
+
+.Hidden {
+    display: none;
+}
+
+.Clearer {
+    display: block;
+    clear: both;
+    font-size: 1px;
+    line-height: 1px;
+    margin: 0;
+    padding: 0;
+}
+
+.FlLeft {
+    float: left;
+}
+
+.FlRight {
+    float: right;
+}
+/*幻灯片区域背景*/
+.MainBg {
+    background-color: #222;
+    width: 960px;
+    margin: 0 auto;
+}
+/*标题和页码*/
+.Title {
+    color: #EEE;
+    padding: 5px 20px 0 20px;
+    text-align: center;
+    line-height: 40px;
+    height: 40px;
+}
+
+    .Title h1 {
+        display: inline;
+    }
+
+    .Title .Counter {
+        color: #666;
+    }
+
+    .Title .CounterCurrent {
+        color: #C00;
+        font-size: 20px;
+        font-weight: bold;
+    }
+/*灰色分隔线*/
+.SpaceLine {
+    border-bottom: 1px solid #333;
+    height: 1px;
+    font-size: 1px;
+}
+/*大图展示区域*/
+.OriginalPicBorder {
+    padding: 15px 15px 0 15px;
+}
+
+#OriginalPic {
+    width: 930px;
+    overflow: hidden;
+    position: relative;
+    font-size: 12px;
+}
+
+    #OriginalPic img {
+        display: block;
+        margin: 0 auto;
+    }
+/*鼠标手势*/
+.CursorL {
+    position: absolute;
+    z-index: 999;
+    width: 50%;
+    height: 600px;
+    color: #FFF;
+    left: 120px;
+    cursor: url(images/CurL.cur), auto;
+    background: url(images/space.png) repeat scroll 0 0 transparent;
+}
+
+.CursorR {
+    position: absolute;
+    z-index: 999;
+    width: 50%;
+    height: 600px;
+    color: #FFF;
+    right: 0;
+    cursor: url(images/CurR.cur), auto;
+    background: url(images/space.png) repeat scroll 0 0 transparent;
+}
+/*小图预览和滑动*/
+.SliderPicBorder {
+    width: 800px;
+    height: 600px;
+    overflow: hidden;
+}
+
+.Summary {
+    line-height: 20px;
+    display: block;
+    width: 100px;
+    margin-right: 10px;
+    color: #999;
+    overflow: hidden;
+    background-color: #333;
+    padding: 10px;
+}
+
+.More {
+    text-align: right;
+    color: #666;
+    line-height: 40px;
+    height: 40px;
+    font-size: 12px;
+    display: block;
+}
+
+.ThumbPicBorder {
+    width: 940px;
+    margin: 0 auto;
+}
+
+#ThumbPic img {
+    border: 3px solid #666;
+    cursor: pointer;
+    background-color: #666;
+    margin: 0 4px;
+    width: 130px;
+    height: 80px;
+    display: block;
+}
+
+    #ThumbPic img.active {
+        border: 3px solid #FF9900;
+    }
+
+.ImgTitle {
+    text-align: center;
+    font-size:16px;
+   a
+}
