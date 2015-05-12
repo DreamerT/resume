@@ -7,16 +7,16 @@ $.getJSON("Data/photo_json.js", function (result) {
         if (vType == data.type) { //那个json
             var datas = data.rows;//具体的数据
             //alert("获取到的长度" + datas.length);
-            var vTitle = "<h1>" + data.Title + "</h1> \
-            <span class=\"Counter\">（<span class=\"CounterCurrent\">1</span>/" + datas.length + "）</span>";
+            var vTitle = "<a href='index.html#portfolio' style='float:left;color:#b6ff00;font-weight:bold;font-size:18px;'>唐厚湖个人主页</a><h1>" + data.Title + "</h1> \
+            <span class=\"Counter\">（<span class=\"CounterCurrent\">1</span>/" + datas.length + "）</span><span style=\"color:red;\">可以点击右下角《查看原图》查看大图</span>";
             $(".Title").append(vTitle);//标题
 
             $("#PhotoMain").html("");
             $("#ThumbPic").html("");
             $.each(datas, function (i, field) {
                 var vPhoto = "<p class=\"Hidden\"><span class=\"Summary FlLeft\">" + field.Content + "</span> \
-                        <span class=\"SliderPicBorder FlRight\"><img src='" + field.ImgUrl + "' /></span><span class=\"Clearer\"></span><span class=\"More\"><a>" + field.ImgTitle + ":标题</a></span><span class=\"More\"> \
-                        <a href='" + field.ImgUrl + "' target=\"_blank\">查看原图</a> <span class=\"OptLine\">|</span><a href=\"index.html#portfolio\">更多项目</a></span></p>";
+                        <span class=\"SliderPicBorder FlRight\"><img src='" + field.ImgUrl + "' /></span><span class=\"Clearer\"></span><span class=\"More\"><a>" + field.ImgTitle + "</a></span><span class=\"More\"> \
+                        <a href='" + field.ImgUrl + "' target=\"_blank\" style=\"color:red;\">查看原图</a> <span class=\"OptLine\">|</span><a href=\"index.html#portfolio\">更多项目</a></span></p>";
                 //alert(vPhoto);
                 $("#PhotoMain").append(vPhoto);//图片内容
                 var vThumbPic = "<li rel='" + field.Id + "'><img src=" + field.Smallimg + " /></li>";
