@@ -104,13 +104,15 @@ body {
     #OriginalPic img {
         display: block;
         margin: 0 auto;
+        width:800px;
+        height:100%;
     }
 /*鼠标手势*/
 .CursorL {
     position: absolute;
     z-index: 999;
     width: 50%;
-    height: 600px;
+    height: 500px;
     color: #FFF;
     left: 120px;
     cursor: url(images/CurL.cur), auto;
@@ -121,7 +123,7 @@ body {
     position: absolute;
     z-index: 999;
     width: 50%;
-    height: 600px;
+    height: 500px;
     color: #FFF;
     right: 0;
     cursor: url(images/CurR.cur), auto;
@@ -130,7 +132,7 @@ body {
 /*小图预览和滑动*/
 .SliderPicBorder {
     width: 800px;
-    height: 600px;
+    height: 500px;
     overflow: hidden;
 }
 

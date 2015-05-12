@@ -357,10 +357,12 @@ body {width: 92%; margin: 0 auto} /* Center page without wrapper */
 /* Portfolio */
 .image{
   position: relative;
+  padding:2px;
 }
 .image img{
   margin: 0px;
   width: 100%;
+  height:306px;
 }
 .image-overlay {
   position: absolute;
